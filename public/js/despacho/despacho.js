@@ -77,8 +77,9 @@ function despacho(){
             const cantDespachar = +document.getElementById("cantidad").value;
             if ((cantDespachar > cantTotal ) || (cantTotal<=0)) {
                 alertaSweet('Error!',"No se puede Despachar una cantidad mayor a la existente ",'error');
+            }else{
+                postDescpacho();
             }
-            postDescpacho();
         });
     }
     /** INICIO CORRESPONDIENTE AL CONTROLADOR DE PRODUCTO */
